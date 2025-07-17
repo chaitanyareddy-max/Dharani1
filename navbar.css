@@ -1,0 +1,121 @@
+/* Reset default spacing and box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: var(--navbar-bg);
+  color: var(--text-color);
+}
+
+/* Your name/logo on the left */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--logo-color); /* Dynamic color via theme */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+  background: none;
+  text-shadow: none; 
+
+}
+
+
+
+/* Navigation links */
+.links {
+  display: flex;
+  gap: 25px;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--hover-color);
+}
+
+/* Right section including theme toggle */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-left: 20px;
+  color: var(--text-color);
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+
+/* Responsive navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+  }
+}
+/* Light Theme */
+.app.light {
+  --navbar-bg: #ffffff;
+  --text-color: #2c3e50;
+  --logo-color: #ff4c4c;     /* 🔴 red tone for name */
+  --highlight-color: #ff4c4c;
+  --hover-color: #007bff;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+}
+
+/* Dark Theme */
+.app.dark {
+  --navbar-bg: #1c1c1c;
+  --text-color: #f0f0f0;
+  --logo-color: #4fc3f7;     /* 🔵 blue tone for dark */
+  --highlight-color: #4fc3f7;
+  --hover-color: #ff6b6b;
+  background-color: #121212;
+  color: var(--text-color);
+}
+
+.nav-left {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff6b6b;  /* Coral Pink or change as needed */
+}
+
+
+

@@ -1,0 +1,27 @@
+.experience-section {
+  padding: 60px 20px;
+   background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+   text-align: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.experience-card {
+  width: 80%;
+  background: #f4f4f4;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
